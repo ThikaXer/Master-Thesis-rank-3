@@ -1,0 +1,1 @@
+Proof is done after linear step with 2 iterations! All cross-ratios are real.
