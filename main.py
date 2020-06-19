@@ -63,10 +63,11 @@ with open('Mech_Thm_proving_incidence_thm/P_integer.pickle', 'wb') as f:
     pickle.dump(Bsp_beweis, f)
 
 
-# configuration from Ex10 JRG Mechanical Theorem Proving in PG,  not realizable S.30
-print('Ex 10 JRG')
-Ex10_points = set(range(10))
-Ex10_collinearities = [
+
+# 10-3-configurations that is non realizable from Coxeter S.6
+print('non-realizable 10-3-configuration')
+nr_points = set(range(10))
+nr_collinearities = [
     {1,3,6},
     {1,4,8},
     {2,3,5},
@@ -77,27 +78,6 @@ Ex10_collinearities = [
     {3,4,0},
     {5,6,0},
     {7,8,0}
-]
-Ex10_beweis = Beweis(Ex10_points, Ex10_collinearities, 'Ex_10_JRG')
-
-with open('Ex_10_JRG/P_integer.pickle', 'wb') as f:
-    pickle.dump(Ex_10_beweis, f)
-
-
-# 10-3-configurations that is non realizable from Coxeter S.6
-print('non-realizable 10-3-configuration')
-nr_points = set(range(10))
-nr_collinearities = [
-    {1,2,9},
-    {1,3,6},
-    {1,4,8},
-    {2,3,5},
-    {2,4,7},
-    {3,0,4},
-    {0,5,6},
-    {7,5,9},
-    {6,8,9},
-    {0,7,8}
 ]
 nr_beweis = Beweis(nr_points, nr_collinearities, 'non_realizable_10_3_config')
 
